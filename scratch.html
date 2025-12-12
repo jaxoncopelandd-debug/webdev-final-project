@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Golf Scratch Page</title>
+    <link rel="stylesheet" href="css/scratch.css">
+</head>
+<body>
+<div class="page-wrapper">
+
+    <!-- DIV #1: Header -->
+    <header class="header" id="top">
+        <h1>Why I Love Golf</h1>
+        <nav class="nav-links">
+            <a href="index.html">Back to Professional Site</a>
+            <a href="#practice">Practice Tips</a>
+            <a href="#tableau-section">Golf Stats</a>
+            <a href="golf-quotes.html">Golf Quote Generator</a>
+        </nav>
+    </header>
+
+    <!-- DIV #2: Main Content -->
+    <main class="content">
+        <section>
+            <h2>My Golf Story</h2>
+            <p>
+                Golf has taught me patience, focus, and resilience. Every round is a chance to restart,
+                learn from the last shot, and make better decisions on the next one.
+            </p>
+            <img src="img/golf-swing.jpg" alt="Golfer swinging a club" class="hero-image">
+        </section>
+
+        <section id="practice">
+            <h2>Practice Plan (Nested Lists)</h2>
+
+            <h3>Weekly Practice Routine</h3>
+            <!-- Ordered list with unordered list inside -->
+            <ol>
+                <li>
+                    Warm-Up
+                    <ul>
+                        <li>5 minutes of stretching</li>
+                        <li>10 short chip shots</li>
+                        <li>10 putts from 3–5 feet</li>
+                    </ul>
+                </li>
+                <li>
+                    Full Swing
+                    <ul>
+                        <li>15 irons focusing on tempo</li>
+                        <li>10 drives aiming for fairway</li>
+                        <li>10 approach shots to the green</li>
+                    </ul>
+                </li>
+                <li>
+                    Short Game
+                    <ul>
+                        <li>Bunker practice from different lies</li>
+                        <li>Pitching from 30–60 yards</li>
+                        <li>Lag putting from 20–40 feet</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <h3>Common Mistakes</h3>
+            <!-- Unordered list with ordered list inside -->
+            <ul>
+                <li>
+                    Rushing the Swing
+                    <ol>
+                        <li>Skipping pre-shot routine</li>
+                        <li>Taking a quick, jerky backswing</li>
+                    </ol>
+                </li>
+                <li>
+                    Poor Course Management
+                    <ol>
+                        <li>Going for “hero shots” instead of smart layups</li>
+                        <li>Ignoring wind, hazards, and elevation changes</li>
+                    </ol>
+                </li>
+                <li>
+                    Mental Game Issues
+                    <ol>
+                        <li>Getting stuck on past mistakes</li>
+                        <li>Playing scared instead of confident</li>
+                    </ol>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Favorite Golf Video</h2>
+            <div class="video-wrapper">
+                <!-- YouTube embed -->
+                <iframe
+                    src="https://www.youtube.com/embed/e4w3vuA4gCw"
+                    title="Golf Video"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <p class="note">
+                This video is embedded directly from YouTube to demonstrate working media on the page.
+            </p>
+        </section>
+
+        <section id="tableau-section">
+            <h2>Interactive Golf Stats (Tableau)</h2>
+            <div class="tableau-wrapper">
+                <!-- Tableau embed (clean public golf dashboard) -->
+                <iframe
+                    src="https://public.tableau.com/views/GolfDashboard_15977034310110/Dashboard1?:showVizHome=no&:embed=true"
+                    title="Golf Dashboard"
+                    frameborder="0">
+                </iframe>
+            </div>
+            <p class="note">
+                This Tableau viz is interactive. You can hover, filter, and explore the golf data.
+            </p>
+        </section>
+    </main>
+
+    <!-- DIV #3: Footer -->
+    <footer class="footer">
+        <a href="#top">Back to Top</a>
+        <span>Scratch page created for Web Development Final Project.</span>
+    </footer>
+</div>
+</body>
+</html>
