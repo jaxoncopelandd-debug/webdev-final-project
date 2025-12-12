@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Golf Quote Generator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .card {
+            background: #ffffff;
+            padding: 24px 28px;
+            border-radius: 14px;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+            max-width: 480px;
+            width: 92%;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 1.6rem;
+            margin-bottom: 8px;
+            color: #073b4c;
+        }
+
+        #quote {
+            font-size: 1rem;
+            font-style: italic;
+            margin: 18px 0 8px;
+        }
+
+        #author {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #118ab2;
+            margin-bottom: 16px;
+        }
+
+        button {
+            padding: 8px 16px;
+            margin: 4px;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        #newQuoteBtn {
+            background-color: #06d6a0;
+        }
+
+        #filterLegendBtn {
+            background-color: #ffd166;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 14px;
+            font-size: 0.9rem;
+            color: #073b4c;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .tagline {
+            font-size: 0.85rem;
+            color: #555;
+            margin-bottom: 6px;
+        }
+    </style>
+</head>
+<body>
+<div class="card">
+    <h1>Golf Quote Generator</h1>
+    <p class="tagline">Get inspired by famous golfers.</p>
+
+    <p id="quote">Click “New Quote” to get started.</p>
+    <p id="author"></p>
+
+    <button id="newQuoteBtn">New Quote</button>
+    <button id="filterLegendBtn">Legend-Only Quote</button>
+
+    <br>
+    <a href="scratch.html">&larr; Back to Scratch Page</a>
+</div>
+
+<script>
+    const quotes = [
+        {
+            text: "The more I practice, the luckier I get.",
+            author: "Gary Player",
+            legend: true
+        },
+        {
+            text: "Success in golf depends less on strength of body than upon strength of mind and character.",
+            author: "Arnold Palmer",
+            legend: true
+        },
+        {
+            text: "Golf is a game that is played on a five-inch course — the distance between your ears.",
+            author: "Bobby Jones",
+            legend: true
+        },
+        {
+            text: "You swing your best when you have the fewest things to think about.",
+            author: "Bobby Jones",
+            legend: true
+        },
+        {
+            text: "Resolve never to quit, never to give up, no matter what the situation.",
+            author: "Jack Nicklaus",
+            legend: true
+        },
+        {
+            text: "It’s a funny thing, the more I practice the luckier I get.",
+            author: "Arnold Palmer",
+            legend: true
+        },
+        {
+            text: "Golf is deceptively simple and endlessly complicated.",
+            author: "Arnold Palmer",
+            legend: true
+        },
+        {
+            text: "Forget the last shot. It’s only the next one that matters.",
+            author: "Unknown",
+            legend: false
+        },
+        {
+            text: "A bad attitude is worse than a bad swing.",
+            author: "Payne Stewart",
+            legend: true
+        },
+        {
+            text: "The most important shot in golf is the next one.",
+            author: "Ben Hogan",
+            legend: true
+        }
+    ];
+
+    const quoteEl = document.getElementById('quote');
+    const authorEl = document.getElementById('author');
+    const newQuoteBtn = document.getElementById('newQuoteBtn');
+    const filterLegendBtn = document.getElementById('filterLegendBtn');
+
+    function getRandomQuote(list) {
+        const index = Math.floor(Math.random() * list.length);
+        return list[index];
+    }
+
+    function displayQuote(list = quotes) {
+        const q = getRandomQuote(list);
+        quoteEl.textContent = `"${q.text}"`;
+        authorEl.textContent = `– ${q.author}`;
+    }
+
+    newQuoteBtn.addEventListener('click', () => {
+        displayQuote(quotes);
+    });
+
+    filterLegendBtn.addEventListener('click', () => {
+        const legends = quotes.filter(q => q.legend);
+        displayQuote(legends);
+    });
+</script>
+</body>
+</html>
